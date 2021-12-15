@@ -1,11 +1,16 @@
 def isPermutation(a,b):
-  if len(a) != len(b):
-    return False
+  if a and b :
+    if len(a) != len(b):
+      return False
+    else:
+      for i in range(len(a)):
+        print(i)
+        if a[i] != b[-1-i]:
+          return False
+      return True
   else:
-    for i in range(len(a)):
-      print(i)
-      if a[i] != b[-1-i]:
-        return False
-    return True
+    return False
 
-print (isPermutation("dcba","abcd"))
+print (isPermutation(None,None))
+print (isPermutation("abc","cba"))
+print (isPermutation("",""))
